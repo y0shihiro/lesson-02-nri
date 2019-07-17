@@ -3,6 +3,11 @@ body {
   margin: 0;
 }
 
+p {
+  font-size: 16px;
+  line-height: 1.9;
+}
+
 li {
   list-style: none;
 }
@@ -15,6 +20,7 @@ header {
   left: 0;
   width: 100%;
   background-color: #FFF;
+  z-index: 99;
   }
 
 .header_logo {
@@ -37,9 +43,11 @@ header {
 
 .topicPath {
   font-size: 12px;
+  line-height: 1.5;
   color: #999999;
   padding-bottom: 15px;
   margin-top: 130px;
+  padding-left: 220px;
 }
 
 .topicPath a {
@@ -48,49 +56,58 @@ header {
   color: #999999;
 }
 
-.mainVisual {
+.articleHead {
   position: relative;
   height: 250px;
   overflow: hidden;
 }
 
-.mainVisualText {
+.articleHeadText {
   position: absolute;
   top: 20px;
   width: 380px;
   color: #FFF;
   z-index: 2;
+  padding-left: 220px;
 }
 
-.mainVisualText h1 {
+.articleHeadText h1 {
   font-size: 28px;
   margin-top: 15px;
 }
 
-.mainVisualText p {
+.articleHeadText p {
   font-size: 20px;
   margin-bottom: 0;
 }
 
-.mainVisual img {
+.articleHead img {
   position: absolute;
   z-index: 1;
-  width: auto;
   max-width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
 }
 
+.articleBody {
+  width: 800px;
+  margin: 0 auto;
+}
+
 .snsBtn ul {
   float: right;
   margin: 32px 64px;
-  display: block;
+  margin-right: 0;
 }
 
 .snsBtn li {
   float: left;
   padding-right: 22px;
+}
+
+.snsBtn li:last-child {
+  padding: 0;
 }
 
 .share {
@@ -100,20 +117,35 @@ header {
   padding-top: 5px;
 }
 
-.article {
+.snsBtn::after {
+  content: "";
   clear: both;
-  margin: 0 80px;
+  display: block;
 }
 
-/* .articleTitle {
-  display: inline-block;
-} */
-
-.article h2 {
-  font-size: 20px;
-  margin-bottom: 20px;
+.articleBodyTitle {
+  display: flex;
+  position: relative;
+  margin-bottom: 30px;
+  margin-top: 10px;
 }
 
-.article h2 img {
+.articleBodyTitle h2 {
+  font-size: 22px;
+  margin: 0;
+  padding-left: 30px;
+}
 
+.articleBodyTitle img {
+  position: absolute;
+  top: 6px;
+}
+
+.articleBody-A p {
+  color: #555555;
+}
+
+.articleBody-A img {
+  max-width: 100%;
+  margin-top: 33px;
 }
