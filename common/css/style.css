@@ -15,6 +15,10 @@ li {
   list-style: none;
 }
 
+
+
+/* ヘッダー */
+
 header {
   height: 60px;
   margin-bottom: 70px;
@@ -44,6 +48,8 @@ header {
   padding-left: 20px;
 }
 
+/* パンくずナビ */
+
 .topicPath {
   font-size: 12px;
   line-height: 1.5;
@@ -58,6 +64,8 @@ header {
   color: #999999;
 }
 
+/* メインタイトル画像 */
+
 .articleHead {
   position: relative;
   height: 250px;
@@ -68,17 +76,18 @@ header {
   position: absolute;
   top: 15px;
   width: 380px;
-  color: #FFF;
   z-index: 2;
 }
 
 .articleHeadText h1 {
   font-size: 28px;
   margin-top: 10px;
+  color: #FFF;
 }
 
 .articleHeadText p {
   font-size: 20px;
+  color: #FFF;
   margin-bottom: 0;
   font-weight: lighter;
 }
@@ -92,10 +101,14 @@ header {
   transform: translate(-50%,-50%);
 }
 
+/* メインボディ */
+
 .articleBody {
   width: 800px;
-  margin: 0 auto;
+  margin: 0 auto 120px;
 }
+
+/* SNSボタン */
 
 .snsBtn ul {
   float: right;
@@ -125,6 +138,8 @@ header {
   display: block;
 }
 
+/* メイン記事 */
+
 .articleBodyTitle {
   display: flex;
   position: relative;
@@ -143,6 +158,8 @@ header {
   top: 8px;
 }
 
+/* 図表 */
+
 .articleBody-A figure img {
   max-width: 100%;
   margin-top: 33px;
@@ -151,6 +168,8 @@ header {
 figure {
   margin: 0;
 }
+
+/* PDFボタン */
 
 .boxLink {
   width: 295px;
@@ -190,10 +209,11 @@ figure {
   opacity: 0.7;
 }
 
+/* 取組み事例リスト */
+
 .articleBodyList {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: space-between; */
 }
 
 .articleBodyList article {
@@ -269,8 +289,8 @@ figure {
 
 .articleBodyListText ul {
   padding: 0;
-  margin-top: 0;
-  margin-bottom: 15px;
+  margin-top: 15px;
+  margin-bottom: 20px;
 }
 
 .articleBodyListText time {
@@ -282,3 +302,157 @@ figure {
   text-decoration-line: underline;
 }
 
+/* 前後ページへのリンク */
+
+.linearNavi {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.linearNavi a {
+  color: #005bac;
+  text-decoration: none;
+}
+
+.linearNavi a:hover {
+  text-decoration: underline;
+}
+
+/* NRI強みボックスリンク */
+
+.springboard {
+  background-color: #deecf8;
+  padding: 25px 10px 30px;
+  margin: 50px 0 20px;
+}
+
+.springboard h4 {
+  margin: 0 0 7px;
+  padding-left: 10px;
+}
+
+.springboardListTop {
+  display: flex;
+  align-content: center;
+}
+
+.springboardListTop a {
+  display: block;
+  width: 100%;
+}
+
+.springboardListBottom {
+  display: flex;
+  align-content: center;
+}
+
+.springboardListBottom a {
+  display: block;
+  width: 100%;
+}
+
+.springboard a {
+  text-decoration: none;
+}
+
+.springboardListHeading {
+  /* width: 250px; */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+
+.springboardListTop .springboardListHeading {
+  height: 70px;
+}
+
+.springboardListBottom .springboardListHeading {
+  height: 50px;
+}
+
+.springboardListHeading img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 7px;
+  transform: translateY(-50%);
+}
+
+.springboardListHeading p {
+  color: #005bac;
+  line-height: 1.25;
+  width: 100%;
+  text-align: center;
+}
+
+.springboardListHeading:hover {
+  background-color: #f4f4f4;
+}
+
+#pageBody {
+  border-bottom: 2px solid #000;
+}
+
+.localNaviTitle {
+  height: 80px;
+  border-bottom: 1px dotted #ccc;
+  box-sizing: border-box;
+}
+
+.localNaviTitle h2 {
+  font-size: 20px;
+  line-height: 80px;
+  margin: 0;
+}
+
+.localNaviCat {
+  border-bottom: 1px dotted #ccc;
+}
+
+.localNaviCatList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.localNaviCatListHeading {
+  width: 25%;
+  position: relative;
+}
+
+.localNaviCatListHeading a {
+  display: block;
+  padding: 0 15px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #005bac;
+}
+
+.localNaviCatListHeading img {
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+}
+
+.backpage {
+  position: relative;
+  margin: 60px 0;
+}
+
+.backpage a {
+  display: block;
+  padding: 0 20px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #005bac;
+}
+
+.backpage img {
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+}
