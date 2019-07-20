@@ -8,7 +8,7 @@ body {
 p {
   font-size: 16px;
   line-height: 1.9;
-  color: #555555;
+  color: #555;
 }
 
 li {
@@ -27,7 +27,7 @@ header {
   left: 0;
   width: 100%;
   background-color: #FFF;
-  z-index: 99;
+  z-index: 5;
   }
 
 .header_logo {
@@ -53,15 +53,15 @@ header {
 .topicPath {
   font-size: 12px;
   line-height: 1.5;
-  color: #999999;
+  color: #999;
   padding-bottom: 15px;
   margin-top: 130px;
+  padding-left: 220px;
 }
 
 .topicPath a {
-  cursor: pointer;
   text-decoration: none;
-  color: #999999;
+  color: #999;
 }
 
 /* メインタイトル画像 */
@@ -75,13 +75,13 @@ header {
 .articleHeadText {
   position: absolute;
   top: 15px;
-  width: 380px;
+  left: 220px;
   z-index: 2;
 }
 
 .articleHeadText h1 {
   font-size: 28px;
-  margin-top: 10px;
+  margin-top: 15px;
   color: #FFF;
 }
 
@@ -89,13 +89,12 @@ header {
   font-size: 20px;
   color: #FFF;
   margin-bottom: 0;
-  font-weight: lighter;
 }
 
 .articleHead img {
   position: absolute;
   z-index: 1;
-  max-width: 100%;
+  width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
@@ -105,10 +104,14 @@ header {
 
 .articleBody {
   width: 800px;
-  margin: 0 auto 120px;
+  margin: 0 auto 100px;
 }
 
-/* SNSボタン */
+/* SNSボタン小 */
+
+.snsBtn {
+  margin-bottom: 20px;
+}
 
 .snsBtn ul {
   float: right;
@@ -127,7 +130,7 @@ header {
 
 .share {
   color: #666;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
   padding-top: 5px;
 }
@@ -148,20 +151,19 @@ header {
 
 .articleBodyTitle h2 {
   font-size: 22px;
-  font-weight: bold;
   margin: 0;
   padding-left: 30px;
 }
 
 .articleBodyTitle img {
   position: absolute;
-  top: 8px;
+  top: 5px;
 }
 
 /* 図表 */
 
 .articleBody-A figure img {
-  max-width: 100%;
+  width: 100%;
   margin-top: 33px;
 }
 
@@ -173,14 +175,14 @@ figure {
 
 .boxLink {
   width: 295px;
-  margin: 30px auto 80px;
+  margin: 40px auto 80px;
 }
 
 .boxLink a {
   background-color: #005bac;
   color: #fff;
   padding: 15px;  
-  font-size: 15px;
+  font-size: 16px;
   display: block;
   text-decoration: none;
   text-align: center;
@@ -192,7 +194,6 @@ figure {
 
 .boxLink a::before {
   content: ">";
-  font-weight: lighter;
   font-size: 11px;
   position: absolute;
   top: 30px;
@@ -219,7 +220,7 @@ figure {
 .articleBodyList article {
   width: 184px;
   margin-right: 21px;
-  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .articleBodyList article:nth-child(4n) {
@@ -248,11 +249,11 @@ figure {
   margin: 0px;
   padding: 2px 6px;
   font-size: 12px;
-  color: #ffffff;
+  color: #fff;
 }
 
 .articleBodyList a img {
-  max-width: 100%;
+  width: 100%;
   position: relative;
   z-index: 0;
   display: block;
@@ -284,7 +285,7 @@ figure {
   display: inline;
   padding: 5px 10px;
   font-size: 12px;
-  color: #555555;
+  color: #555;
 }
 
 .articleBodyListText ul {
@@ -324,7 +325,7 @@ figure {
 .springboard {
   background-color: #deecf8;
   padding: 25px 10px 30px;
-  margin: 50px 0 20px;
+  margin: 50px 0 30px;
 }
 
 .springboard h4 {
@@ -357,7 +358,6 @@ figure {
 }
 
 .springboardListHeading {
-  /* width: 250px; */
   background-color: #fff;
   border: 1px solid #ccc;
   position: relative;
@@ -394,13 +394,18 @@ figure {
   background-color: #f4f4f4;
 }
 
-#pageBody {
-  border-bottom: 2px solid #000;
+/* 企業情報ナビ */
+
+.localNavi,
+.backpage {
+  width: 1000px;
+  margin: 0 auto;
 }
 
 .localNaviTitle {
-  height: 80px;
-  border-bottom: 1px dotted #ccc;
+  height: 90px;
+  border-bottom: 1px dotted #999;
+  border-top: 2px solid #000;
   box-sizing: border-box;
 }
 
@@ -411,17 +416,27 @@ figure {
 }
 
 .localNaviCat {
-  border-bottom: 1px dotted #ccc;
+  border-bottom: 1px dotted #999;
+}
+
+.localNaviCat h3 {
+  font-size: 16px;
+  margin-top: 35px;
 }
 
 .localNaviCatList {
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 15px;
 }
 
 .localNaviCatListHeading {
   width: 25%;
   position: relative;
+}
+
+.localNaviCatListHeading p {
+  margin: 7px 0;
 }
 
 .localNaviCatListHeading a {
@@ -438,9 +453,12 @@ figure {
   transform: translateY(-50%);
 }
 
+/* 前ページリンク */
+
 .backpage {
   position: relative;
-  margin: 60px 0;
+  margin-top: 60px;
+  margin-bottom: 90px;
 }
 
 .backpage a {
@@ -455,4 +473,131 @@ figure {
   position: absolute;
   top:50%;
   transform: translateY(-50%);
+}
+
+/* SNSボタン大 */
+
+.followUs {
+  height: 90px;
+  border-top: 2px solid #999;
+  border-bottom: 2px solid #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.followUs h3,
+.followUs img {
+  padding: 0 20px;
+}
+
+.followUs h3 {
+  color: #005bac;
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+/* グローバルナビ */
+
+.globalNavi {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.globalNavi a {
+  display: block;
+  text-decoration: none;
+  color: #666;
+}
+
+.globalNavi a:hover {
+  text-decoration: underline;
+}
+
+.globalNaviItem {
+  width: 25%;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.globalNaviTitle h4 {
+  background-image: url("../../images/icon-chevronRight.svg");
+  background-repeat: no-repeat;
+  background-size: 3px;
+  background-position: left;
+  padding: 15px 0 15px 15px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+  font-weight: 1000;
+  margin: 0;
+}
+
+.globalNaviList ul li {
+  background-image: url("../../images/icon-chevronRight.svg");
+  background-repeat: no-repeat;
+  background-size: 3px;
+  background-position: 0 95%;
+  padding-left: 15px;
+  font-size: 14px;
+  padding-top: 20px;
+  color: #ccc;
+}
+
+.globalNaviList ul {
+  padding: 0;
+  margin-top: 0;
+}
+
+/* フッター */
+
+#pageFoot {
+  width: 1000px;
+  margin: 0 auto 120px;
+
+}
+
+.footerList {
+  display: flex;
+  margin-top: 50px;
+}
+
+.footerList a {
+  display: block;
+  text-decoration: none;
+  color: #999;
+  font-size: 12px;
+  padding: 0 15px;
+  line-height: 1;
+}
+
+.footerList a:hover {
+  text-decoration: underline;
+}
+
+.footerList p {
+  border-right: 1px solid #ccc;
+}
+
+.footerList p:last-child {
+  border-right: none;
+}
+
+/* コピーライト */
+
+.copyright {
+  padding: 0 10px;
+}
+
+.copyright small {
+  font-size: 10px;
+}
+
+.copyright p {
+  margin: 0;
+  padding: 0;
 }
