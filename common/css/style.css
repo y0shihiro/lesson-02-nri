@@ -35,18 +35,40 @@ li {
   padding: 15px 53px;
 }
 
-#pageHead .header_list ul {
+#pageHead .header_list {
   float: right;
+  width: 190px;
+  line-height: 0;
+}
+
+#pageHead .header_list ul {
   margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
 }
 
-#pageHead .header_list ul li {
-  display: inline-block;
+#pageHead .header_list ul li a {
+  width: 60px;
+  display: block;
 }
 
-#pageHead .header_list ul li:last-child {
-  padding-left: 20px;
+#pageHead .header_list ul .icon {
+  width: 120px;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
 }
+
+#pageHead .header_list ul .icon li {
+  width: 60px;
+}
+
+#pageHead .header_list ul .icon li a {
+  text-decoration: none;
+  color: #005bac;
+}
+
 
 /* パンくずナビ */
 
