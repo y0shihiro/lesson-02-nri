@@ -19,7 +19,7 @@ li {
 
 /* ヘッダー */
 
-header {
+#pageHead {
   height: 60px;
   margin-bottom: 70px;
   position: fixed;
@@ -30,27 +30,27 @@ header {
   z-index: 5;
   }
 
-.header_logo {
+  #pageHead .header_logo {
   float: left;
   padding: 15px 53px;
 }
 
-.header_list ul {
+#pageHead .header_list ul {
   float: right;
   margin: 0;
 }
 
-.header_list ul li {
+#pageHead .header_list ul li {
   display: inline-block;
 }
 
-.header_list ul li:last-child {
+#pageHead .header_list ul li:last-child {
   padding-left: 20px;
 }
 
 /* パンくずナビ */
 
-.topicPath {
+#topicPath {
   font-size: 12px;
   line-height: 1.5;
   color: #999;
@@ -59,39 +59,39 @@ header {
   padding-left: 220px;
 }
 
-.topicPath a {
+#topicPath a {
   text-decoration: none;
   color: #999;
 }
 
 /* メインタイトル画像 */
 
-.articleHead {
+#pageBody #articleHead {
   position: relative;
   height: 250px;
   overflow: hidden;
 }
 
-.articleHeadText {
+#pageBody #articleHead .articleHeadText {
   position: absolute;
   top: 15px;
   left: 220px;
   z-index: 2;
 }
 
-.articleHeadText h1 {
+#pageBody #articleHead .articleHeadText h1 {
   font-size: 28px;
   margin-top: 15px;
   color: #FFF;
 }
 
-.articleHeadText p {
+#pageBody #articleHead .articleHeadText p {
   font-size: 20px;
   color: #FFF;
   margin-bottom: 0;
 }
 
-.articleHead img {
+#pageBody #articleHead img {
   position: absolute;
   z-index: 1;
   width: 100%;
@@ -102,40 +102,41 @@ header {
 
 /* メインボディ */
 
-.articleBody {
+#pageBody #articleBody,
+#pageBody #articleFoot {
   width: 800px;
   margin: 0 auto 100px;
 }
 
 /* SNSボタン小 */
 
-.snsBtn {
+#pageBody .snsBtn {
   margin-bottom: 20px;
 }
 
-.snsBtn ul {
+#pageBody .snsBtn ul {
   float: right;
   margin: 32px 64px;
   margin-right: 0;
 }
 
-.snsBtn li {
+#pageBody .snsBtn li {
   float: left;
   padding-right: 22px;
 }
 
-.snsBtn li:last-child {
+#pageBody .snsBtn li:last-child {
   padding: 0;
 }
 
-.share {
+#pageBody .snsBtn .share {
   color: #666;
   font-size: 12px;
   font-weight: bold;
   padding-top: 5px;
 }
 
-.snsBtn::after {
+#pageBody .snsBtn::after {
   content: "";
   clear: both;
   display: block;
@@ -143,42 +144,42 @@ header {
 
 /* メイン記事 */
 
-.articleBodyTitle {
+#pageBody .articleBodyTitle {
   display: flex;
   position: relative;
   margin-bottom: 30px;
 }
 
-.articleBodyTitle h2 {
+#pageBody .articleBodyTitle h2 {
   font-size: 22px;
   margin: 0;
   padding-left: 30px;
 }
 
-.articleBodyTitle img {
+#pageBody .articleBodyTitle img {
   position: absolute;
   top: 5px;
 }
 
 /* 図表 */
 
-.articleBody-A figure img {
+#pageBody #articleBody-A figure img {
   width: 100%;
   margin-top: 33px;
 }
 
-figure {
+#pageBody #articleBody-A figure {
   margin: 0;
 }
 
 /* PDFボタン */
 
-.boxLink {
+#pageBody #articleBody-A .boxLink {
   width: 295px;
   margin: 40px auto 80px;
 }
 
-.boxLink a {
+#pageBody #articleBody-A .boxLink a {
   background-color: #005bac;
   color: #fff;
   padding: 15px;  
@@ -192,7 +193,7 @@ figure {
   border: 1px solid #005bac;
 }
 
-.boxLink a::before {
+#pageBody #articleBody-A .boxLink a::before {
   content: ">";
   font-size: 11px;
   position: absolute;
@@ -200,43 +201,43 @@ figure {
   left: 10px;
 }
 
-.boxLink a::after {
+#pageBody #articleBody-A .boxLink a::after {
   content: url("../../images/icon-pdf.svg");
   position: absolute;
   bottom: 10px;
 }
 
-.boxLink a:hover {
+#pageBody #articleBody-A .boxLink a:hover {
   opacity: 0.7;
 }
 
 /* 取組み事例リスト */
 
-.articleBodyList {
+#pageBody #articleBody-B .articleBodyList {
   display: flex;
   flex-wrap: wrap;
 }
 
-.articleBodyList article {
+#pageBody #articleBody-B .articleBodyList article {
   width: 184px;
   margin-right: 21px;
   margin-bottom: 30px;
 }
 
-.articleBodyList article:nth-child(4n) {
+#pageBody #articleBody-B .articleBodyList article:nth-child(4n) {
   margin-right: 0;
 }
 
-.articleBodyListVisual {
+#pageBody #articleBody-B .articleBodyList .articleBodyListVisual {
   position: relative;
   border: 1px solid #ccc;
 }
 
-.articleBodyListVisual:hover {
+#pageBody #articleBody-B .articleBodyList .articleBodyListVisual:hover {
   border: 1px solid #005bac;
 }
 
-.articleBodyListCategory {
+#pageBody #articleBody-B .articleBodyList .articleBodyListVisual .articleBodyListCategory {
   background-color: #005bac;
   position: absolute;
   top: 0;
@@ -245,41 +246,41 @@ figure {
   z-index: 1;
 }
 
-.articleBodyListCategory p {
+#pageBody #articleBody-B .articleBodyList .articleBodyListVisual .articleBodyListCategory p {
   margin: 0px;
   padding: 2px 6px;
   font-size: 12px;
   color: #fff;
 }
 
-.articleBodyList a img {
+#pageBody #articleBody-B .articleBodyList a img {
   width: 100%;
   position: relative;
   z-index: 0;
   display: block;
 }
 
-.articleBodyListText P,
-.articleBodyListText ul li,
-.articleBodyListText time {
+#pageBody #articleBody-B .articleBodyList .articleBodyListText P,
+#pageBody #articleBody-B .articleBodyList .articleBodyListText ul li,
+#pageBody #articleBody-B .articleBodyList .articleBodyListText time {
   font-size: 14px;
   line-height: 1.5;
 }
 
-.articleBodyListText a {
+#pageBody #articleBody-B .articleBodyList .articleBodyListText a {
   text-decoration: none;
   color: inherit;
 }
 
-.articleBodyListText p {
+#pageBody #articleBody-B .articleBodyList .articleBodyListText p {
   margin: 10px 0;
 }
 
-.articleBodyListVisual a {
+#pageBody #articleBody-B .articleBodyList .articleBodyListVisual a {
   display: block;
 }
 
-.articleBodyListText ul li {
+#pageBody #articleBody-B .articleBodyList .articleBodyListText ul li {
   border: 1px solid #ccc;
   border-radius: 10px;
   display: inline;
@@ -288,76 +289,76 @@ figure {
   color: #555;
 }
 
-.articleBodyListText ul {
+#pageBody #articleBody-B .articleBodyList .articleBodyListText ul {
   padding: 0;
   margin-top: 15px;
   margin-bottom: 20px;
 }
 
-.articleBodyListText time {
+#pageBody #articleBody-B .articleBodyList .articleBodyListText time {
   color: #999;
 }
 
-.articleBodyListText p a:hover,
-.articleBodyListText ul li a:hover {
+#pageBody #articleBody-B .articleBodyList .articleBodyListText p a:hover,
+#pageBody #articleBody-B .articleBodyList .articleBodyListText ul li a:hover {
   text-decoration-line: underline;
 }
 
 /* 前後ページへのリンク */
 
-.linearNavi {
+#pageBody #articleFoot .linearNavi {
   display: flex;
   justify-content: space-between;
   margin-top: 100px;
 }
 
-.linearNavi a {
+#pageBody #articleFoot .linearNavi a {
   color: #005bac;
   text-decoration: none;
 }
 
-.linearNavi a:hover {
+#pageBody #articleFoot .linearNavi a:hover {
   text-decoration: underline;
 }
 
 /* NRI強みボックスリンク */
 
-.springboard {
+#pageBody #articleFoot .springboard {
   background-color: #deecf8;
   padding: 25px 10px 30px;
   margin: 50px 0 30px;
 }
 
-.springboard h4 {
+#pageBody #articleFoot .springboard h4 {
   margin: 0 0 7px;
   padding-left: 10px;
 }
 
-.springboardListTop {
+#pageBody #articleFoot .springboardListTop {
   display: flex;
   align-content: center;
 }
 
-.springboardListTop a {
+#pageBody #articleFoot .springboardListTop a {
   display: block;
   width: 100%;
 }
 
-.springboardListBottom {
+#pageBody #articleFoot .springboardListBottom {
   display: flex;
   align-content: center;
 }
 
-.springboardListBottom a {
+#pageBody #articleFoot .springboardListBottom a {
   display: block;
   width: 100%;
 }
 
-.springboard a {
+#pageBody #articleFoot .springboard a {
   text-decoration: none;
 }
 
-.springboardListHeading {
+#pageBody #articleFoot .springboardListHeading {
   background-color: #fff;
   border: 1px solid #ccc;
   position: relative;
@@ -367,15 +368,15 @@ figure {
   margin: 10px;
 }
 
-.springboardListTop .springboardListHeading {
+#pageBody #articleFoot .springboardListTop .springboardListHeading {
   height: 70px;
 }
 
-.springboardListBottom .springboardListHeading {
+#pageBody #articleFoot .springboardListBottom .springboardListHeading {
   height: 50px;
 }
 
-.springboardListHeading img {
+#pageBody #articleFoot .springboardListHeading img {
   display: block;
   position: absolute;
   top: 50%;
@@ -383,63 +384,63 @@ figure {
   transform: translateY(-50%);
 }
 
-.springboardListHeading p {
+#pageBody #articleFoot .springboardListHeading p {
   color: #005bac;
   line-height: 1.25;
   width: 100%;
   text-align: center;
 }
 
-.springboardListHeading:hover {
+#pageBody #articleFoot .springboardListHeading:hover {
   background-color: #f4f4f4;
 }
 
 /* 企業情報ナビ */
 
-.localNavi,
-.backpage {
+#pageFoot .localNavi,
+#pageFoot .backpage {
   width: 1000px;
   margin: 0 auto;
 }
 
-.localNaviTitle {
+#pageFoot .localNaviTitle {
   height: 90px;
   border-bottom: 1px dotted #999;
   border-top: 2px solid #000;
   box-sizing: border-box;
 }
 
-.localNaviTitle h2 {
+#pageFoot .localNaviTitle h2 {
   font-size: 20px;
   line-height: 80px;
   margin: 0;
 }
 
-.localNaviCat {
+#pageFoot .localNaviCat {
   border-bottom: 1px dotted #999;
 }
 
-.localNaviCat h3 {
+#pageFoot .localNaviCat h3 {
   font-size: 16px;
   margin-top: 35px;
 }
 
-.localNaviCatList {
+#pageFoot .localNaviCatList {
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 15px;
 }
 
-.localNaviCatListHeading {
+#pageFoot .localNaviCatListHeading {
   width: 25%;
   position: relative;
 }
 
-.localNaviCatListHeading p {
+#pageFoot .localNaviCatListHeading p {
   margin: 7px 0;
 }
 
-.localNaviCatListHeading a {
+#pageFoot .localNaviCatListHeading a {
   display: block;
   padding: 0 15px;
   font-size: 14px;
@@ -447,7 +448,7 @@ figure {
   color: #005bac;
 }
 
-.localNaviCatListHeading img {
+#pageFoot .localNaviCatListHeading img {
   position: absolute;
   top:50%;
   transform: translateY(-50%);
@@ -455,13 +456,13 @@ figure {
 
 /* 前ページリンク */
 
-.backpage {
+#pageFoot .backpage {
   position: relative;
   margin-top: 60px;
   margin-bottom: 90px;
 }
 
-.backpage a {
+#pageFoot .backpage a {
   display: block;
   padding: 0 20px;
   font-size: 16px;
@@ -469,7 +470,7 @@ figure {
   color: #005bac;
 }
 
-.backpage img {
+#pageFoot .backpage img {
   position: absolute;
   top:50%;
   transform: translateY(-50%);
@@ -477,7 +478,7 @@ figure {
 
 /* SNSボタン大 */
 
-.followUs {
+#pageFoot .followUs {
   height: 90px;
   border-top: 2px solid #999;
   border-bottom: 2px solid #999;
@@ -487,20 +488,21 @@ figure {
   margin-bottom: 40px;
 }
 
-.followUs h3,
-.followUs img {
+#pageFoot .followUs p,
+#pageFoot .followUs img {
   padding: 0 20px;
 }
 
-.followUs h3 {
+#pageFoot .followUs p {
   color: #005bac;
   font-family: sans-serif;
   font-size: 18px;
+  font-weight: bold;
 }
 
 /* グローバルナビ */
 
-.globalNavi {
+#pageFoot .globalNavi {
   width: 1000px;
   margin: 0 auto;
   display: flex;
@@ -508,23 +510,23 @@ figure {
   justify-content: space-between;
 }
 
-.globalNavi a {
+#pageFoot .globalNavi a {
   display: block;
   text-decoration: none;
   color: #666;
 }
 
-.globalNavi a:hover {
+#pageFoot .globalNavi a:hover {
   text-decoration: underline;
 }
 
-.globalNaviItem {
+#pageFoot .globalNaviItem {
   width: 25%;
   box-sizing: border-box;
   padding: 0 10px;
 }
 
-.globalNaviTitle h4 {
+#pageFoot .globalNaviTitle h4 {
   background-image: url("../../images/icon-chevronRight.svg");
   background-repeat: no-repeat;
   background-size: 3px;
@@ -537,7 +539,7 @@ figure {
   margin: 0;
 }
 
-.globalNaviList ul li {
+#pageFoot .globalNaviList ul li {
   background-image: url("../../images/icon-chevronRight.svg");
   background-repeat: no-repeat;
   background-size: 3px;
@@ -548,7 +550,7 @@ figure {
   color: #ccc;
 }
 
-.globalNaviList ul {
+#pageFoot .globalNaviList ul {
   padding: 0;
   margin-top: 0;
 }
@@ -561,12 +563,12 @@ figure {
 
 }
 
-.footerList {
+#pageFoot .footerList {
   display: flex;
   margin-top: 50px;
 }
 
-.footerList a {
+#pageFoot .footerList a {
   display: block;
   text-decoration: none;
   color: #999;
@@ -575,29 +577,29 @@ figure {
   line-height: 1;
 }
 
-.footerList a:hover {
+#pageFoot .footerList a:hover {
   text-decoration: underline;
 }
 
-.footerList p {
+#pageFoot .footerList p {
   border-right: 1px solid #ccc;
 }
 
-.footerList p:last-child {
+#pageFoot .footerList p:last-child {
   border-right: none;
 }
 
 /* コピーライト */
 
-.copyright {
+#pageFoot #copyright {
   padding: 0 10px;
 }
 
-.copyright small {
+#pageFoot #copyright small {
   font-size: 10px;
 }
 
-.copyright p {
+#pageFoot #copyright p {
   margin: 0;
   padding: 0;
 }
